@@ -29,7 +29,8 @@ def handle_client(conn, addr):
         try:
             # receive message from client
             message = conn.recv(1024).decode()
-
+            print(f'{nickname}: {message}'.encode())
+            
             # check if message is a private message
             if message.startswith('/p '):
                 # get recipient and message content
